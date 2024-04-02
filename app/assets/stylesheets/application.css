@@ -9,12 +9,15 @@
 }
 
 .instrument-index-grid{
+    border-radius: 15px;
+    column-gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 
 } 
     .instrument{
-      
+        border-radius: 2px;
+        border-color: black;
          border-left: 0;
          border-top: 0;
          position: relative;
@@ -49,7 +52,7 @@
         }
 
         .condition{
-            position: absolute;
+            position: top-left;
             bottom: 10px;
             right: 9px;
         }
