@@ -1,19 +1,60 @@
+<%= form_with(model: instrument) do |form| %>
+  <% if instrument.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(instrument.errors.count, "error") %> prohibited this instrument from being saved:</h2>
 
-<%= simple_form_for(@instrument) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <ul>
+        <% instrument.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :brand %>
-    <%= f.input :model %>
-    <%= f.input :description %>
-    <%= f.input :condition %>
-    <%= f.input :finish %>
-    <%= f.input :title %>
-    <%= f.input :price %>
+<div class='container'>
+   <div>
+    <%= form.label :title, style: "display: block", class:"title" %>
+    <%= form.text_field :title,class:"text" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+   <div>
+    <%= form.label :price, style: "display: block", class:"price" %>
+    <%= form.text_field :price,class:"text" %>
+  </div>
+
+   <div>
+    <%= form.label :model, style: "display: block", class:"model" %>
+    <%= form.text_field :model,class:"text" %>
+  </div>
+
+   <div>
+    <%= form.label :description, style: "display: block", class:"description" %>
+    <%= form.text_area :description,class:"text" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.select :brand, Instrument::BRAND, prompt: "Select brand" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.select :condition, Instrument::CONDITION, prompt: "Select condition" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finish %>
+    <%= form.select :finish, Instrument::FINISH, prompt: "Select finish" %>
+  </div>
+
+
+  <div>
+  <%=  form.file_field :image, class:'choose-image-button' %>
+  <div>
+
+    <%= form.submit %>
   </div>
 <% end %>
+</div>
+
+<%= stylesheet_link_tag 'instrumant_form' %>

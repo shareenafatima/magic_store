@@ -321,7 +321,7 @@ DEPENDENCIES
   capybara
   carrierwave
   debug
-  devise (~> 4.8)
+  devise
   gravatar_image_tag (~> 1.2)
   guard (~> 2.16)
   importmap-rails

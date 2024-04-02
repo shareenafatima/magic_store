@@ -27,7 +27,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem 'simple_form', '~> 5.1'
 gem 'gravatar_image_tag', '~> 1.2'
-gem 'devise','~> 4.8'
+gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.11.0'
 
