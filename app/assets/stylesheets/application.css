@@ -9,6 +9,7 @@
 }
 
 .instrument-index-grid{
+
     border-radius: 15px;
     column-gap: 30px;
     display: grid;
@@ -16,8 +17,7 @@
 
 } 
     .instrument{
-        border-radius: 2px;
-        border-color: black;
+        
          border-left: 0;
          border-top: 0;
          position: relative;
@@ -35,6 +35,7 @@
     
 
     .instrument-thumb{
+        border: 2px solid black;
         position: relative;
         max-height: 150px;
         overflow: hidden;
@@ -57,3 +58,18 @@
             right: 9px;
         }
    
+.feature-image{
+    margin-top: 10px;
+    margin-left: 10px;
+width: 60%;
+height: 500px;
+overflow: hidden;
+}
+
+.content{
+ 
+    padding: 80px;
+    padding-top:5px ;
+    align-items: center;
+    text-align: center;
+}
