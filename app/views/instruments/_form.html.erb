@@ -18,43 +18,42 @@
   </div>
 
    <div>
-    <%= form.label :price, style: "display: block", class:"price" %>
+    <%= form.label :price, style: "display: block", class:"title" %>
     <%= form.text_field :price,class:"text" %>
   </div>
 
    <div>
-    <%= form.label :model, style: "display: block", class:"model" %>
+    <%= form.label :model, style: "display: block", class:"title" %>
     <%= form.text_field :model,class:"text" %>
   </div>
 
    <div>
-    <%= form.label :description, style: "display: block", class:"description" %>
+    <%= form.label :description, style: "display: block", class:"title" %>
     <%= form.text_area :description,class:"text" %>
   </div>
 
   <div class="field">
-    <%= form.label :brand %>
+    <%= form.label :brand, class:"title" %>
     <%= form.select :brand, Instrument::BRAND, prompt: "Select brand" %>
   </div>
 
   <div class="field">
-    <%= form.label :condition %>
+    <%= form.label :condition, class:"title" %>
     <%= form.select :condition, Instrument::CONDITION, prompt: "Select condition" %>
   </div>
 
   <div class="field">
-    <%= form.label :finish %>
+    <%= form.label :finish, class:"title"  %>
     <%= form.select :finish, Instrument::FINISH, prompt: "Select finish" %>
   </div>
 
-
-  <>
   <%=  form.file_field :image, class:'choose-image-button' %>
   <div>
-
+<br>
+<br>
     <%= form.submit %>
   </div>
 <% end %>
 </div>
 
-<%= stylesheet_link_tag 'instrumant_form' %>
+<h1><%= stylesheet_link_tag 'instrumant_form' %></h1>
